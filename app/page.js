@@ -4,6 +4,10 @@ import { Input } from "@/components/ui/input"
 import { CardContent, Card } from "@/components/ui/card"
 import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar"
 import { Gamepad2, Upload, History, Users } from "lucide-react"
+import { MemoryMatch } from "@/components/games/memorymatch/MemoryMatch"
+import { WhackAMole } from "@/components/games/whackamole/WhackAMole"
+import { TicTacToe } from "@/components/games/tictactoe/TicTacToe"
+
 
 export default function LandingPage() {
   return (
@@ -99,28 +103,21 @@ export default function LandingPage() {
               Featured Games
             </h2>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {[1, 2, 3].map((game) => (
-                <Card key={game}>
-                  <CardContent className="p-4">
-                    <img
-                      alt="Game preview"
-                      className="w-full h-48 object-cover rounded-lg mb-4"
-                      height="200"
-                      src={`/placeholder.svg?height=200&width=300`}
-                      style={{
-                        aspectRatio: "300/200",
-                        objectFit: "cover",
-                      }}
-                      width="300"
-                    />
-                    <h3 className="text-xl font-bold mb-2">Awesome Game {game}</h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
-                      A brief description of this awesome game and what makes it unique.
-                    </p>
-                    <Button className="w-full">Play Now</Button>
-                  </CardContent>
-                </Card>
-              ))}
+              <Card>
+                <CardContent className="p-6">
+                  <MemoryMatch />
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="p-6">
+                  <WhackAMole />
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="p-6">
+                  <TicTacToe />
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
