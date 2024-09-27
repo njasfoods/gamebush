@@ -156,8 +156,8 @@ export default function LandingPage() {
                       </div>
                     </div>
                     <p className="text-gray-500 dark:text-gray-400">
-                      "Game Corner has been an amazing platform for discovering unique games and connecting with other
-                      gaming enthusiasts. I've found some real gems here!"
+                      &quot;Game Corner has been an amazing platform for discovering unique games and connecting with other
+                      gaming enthusiasts. I&apos;ve found some real gems here!&quot;
                     </p>
                   </CardContent>
                 </Card>
